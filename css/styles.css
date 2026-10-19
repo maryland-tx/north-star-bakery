@@ -1,0 +1,12 @@
+/* possibly adding another color to the headers
+h1 {
+color: #86888a;
+} */
+
+/* Global background */
+body {
+  background-color: #FAF7F2;
+  color: #68696b; /* optional: dark text to keep contrast */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
