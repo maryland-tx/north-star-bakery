@@ -71,12 +71,24 @@ nav a {
     gap: 20px;                  
     padding: 30px; 
 }
+.goodies img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
 .items {
    display: flex;
     justify-content: flex-end;   
     align-items: center;         
     gap: 30px;                  
     padding: 60px; 
+}
+
+.items img {
+    max-width: 60%;
+    height: auto;
+    display: block;
 }
 
 @media (max-width: 600px) {
@@ -95,6 +107,17 @@ nav a {
 @media (max-width: 600px) {
     .items {
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .goodies {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .goodies img {
+        max-width: 70%;
     }
 }
