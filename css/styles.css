@@ -60,8 +60,8 @@ nav a {
 .left-img {
     display: block;
     max-width: 75%;
-    height: auto;
     text-align: left;
+    height: auto;
 }
 
 .goodies {
@@ -88,7 +88,6 @@ nav a {
 
 @media (max-width: 600px) {
     .left-img {
-        flex-direction: column;
-        gap: 10px;
+        max-width: 70%;
     }
 }
