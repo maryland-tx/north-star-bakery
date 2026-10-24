@@ -80,6 +80,7 @@ nav a {
 .items {
    display: flex;
     justify-content: flex-end;   
+    flex-wrap: wrap;
     align-items: center;         
     gap: 30px;                  
     padding: 60px; 
@@ -112,12 +113,19 @@ nav a {
 }
 
 @media (max-width: 600px) {
+    .items img {
+        max-width: 90%;
+        height: auto; 
+    }
+}
+
+@media (max-width: 600px) {
     .goodies {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .goodies img {
-        max-width: 70%;
+        max-width: 90%;
     }
 }
