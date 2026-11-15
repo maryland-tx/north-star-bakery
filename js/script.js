@@ -53,7 +53,7 @@ form.addEventListener("submit", function(event) {
 
     let isValid = true;
 
-    // Required Name Check
+    // checks for entered name
     if (nameField.value.trim() === "") {
         showError(
             nameField,
@@ -63,7 +63,7 @@ form.addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Email Validation
+    // checks for valid email
     if (
         emailField.value.trim() === "" ||
         !emailField.value.includes("@")
@@ -76,7 +76,7 @@ form.addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Minimum Length Validation
+    // checks for mimimnum length
     if (detailsField.value.trim().length < 10) {
         showError(
             detailsField,
@@ -89,5 +89,29 @@ form.addEventListener("submit", function(event) {
     if (isValid) {
         alert("Form submitted successfully!");
         form.submit();
+    }
+});
+
+// save Name 
+nameField.addEventListener("input", function () {
+    localStorage.setItem("savedName", nameField.value);
+});
+
+// save Email
+emailField.addEventListener("input", function () {
+    localStorage.setItem("savedEmail", emailField.value);
+});
+
+// saved values 
+window.addEventListener("load", function () {
+    const savedName = localStorage.getItem("savedName");
+    const savedEmail = localStorage.getItem("savedEmail");
+
+    if (savedName) {
+        nameField.value = savedName;
+    }
+
+    if (savedEmail) {
+        emailField.value = savedEmail;
     }
 });
